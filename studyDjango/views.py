@@ -44,4 +44,5 @@ def renderMethod(request):
     return render(request,"runoob.html",{"name":name,"hello":hello})
 def redirectMethod(request):
     # redirect()：重定向，跳转新页面。参数为字符串，字符串中填写页面路径。一般用于form表单提交后，跳转到新页面。
-    return redirect('/')
+    return redirect("https://www.baidu.com")
+    # return render(request,"/")
