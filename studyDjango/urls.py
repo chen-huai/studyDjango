@@ -27,5 +27,6 @@ urlpatterns = [
     # url(r'^search/$(?i)', search.search),
     # re_path(r'^index/$(?i)', views.index, name='index'),
     # re_path(r'^bio/(?P<username>\w+)/$(?i)', views.bio, name='bio'),
-    re_path(r'^app01/', include('app01.urls')),
+    re_path(r'^app01/(?i)', include('app01.urls')),
+    re_path(r'^moreTable/(?i)', include('moreTable.urls')),
 ]

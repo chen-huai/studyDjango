@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'TestModel',
     'app01',
+    'moreTable',
 ]
 
 MIDDLEWARE = [
