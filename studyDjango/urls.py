@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.urls import include, re_path,path
 from . import views,testdb,search,search2
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
     # url(r'^admin/', admin.site.urls),
     re_path(r'^$(?i)', views.hello),
     re_path(r'runoob/$(?i)', views.runoob),
@@ -23,10 +23,8 @@ urlpatterns = [
     re_path(r'^httpRes/$(?i)', views.httpRes),
     re_path(r'^renderMethod/$(?i)', views.renderMethod),
     path('redirectMethod/', views.redirectMethod),
-    # url(r'^search-form/$(?i)', search.search_form),
-    # url(r'^search/$(?i)', search.search),
-    # re_path(r'^index/$(?i)', views.index, name='index'),
-    # re_path(r'^bio/(?P<username>\w+)/$(?i)', views.bio, name='bio'),
-    re_path(r'^app01/(?i)', include('app01.urls')),
-    re_path(r'^moreTable/(?i)', include('moreTable.urls')),
+    re_path(r'app01/', include('app01.urls')),
+    re_path(r'moreTable/', include('moreTable.urls')),
+    # path(r'app01/', include('app01.urls')),
+    # path(r'moreTable/', include('moreTable.urls')),
 ]
