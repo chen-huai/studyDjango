@@ -13,6 +13,8 @@ class Publish(models.Model):
     name = models.CharField(max_length=32)
     city = models.CharField(max_length=64)
     email = models.EmailField()
+    def __unicode__(self):              # __str__ on Python 3
+        return self.name
 
 
 class Author(models.Model):
