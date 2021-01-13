@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'simpleui',
     # 'bootstrap_admin',
+    # 'captcha',
+    # 'multi_captcha_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -144,3 +146,9 @@ SIMPLEUI_LOGO = 'https://www.tuvsud.cn/images/logo-100.png'# TUV logo
 SIMPLEUI_ICON = {
 	'多表测试': 'fas fa-archive',
 }
+
+
+# 验证码配置
+# MULTI_CAPTCHA_ADMIN = {
+#     'engine': 'simple-captcha',
+# }

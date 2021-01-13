@@ -8,6 +8,7 @@ from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    # path('captcha/', include('captcha.urls')),
     # url(r'^ch\.ico/pre>, RedirectView.as_view(url=r'statics/images/applications_chemistry_science.ico')),
     # url(r'^admin/', admin.site.urls),
     re_path(r'^$(?i)', views.hello),
