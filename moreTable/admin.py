@@ -1,17 +1,17 @@
-from django.contrib import admin
-
 # Register your models here.
 from django.contrib import admin
 from moreTable.models import *
 
-
+from django.contrib import admin
+admin.site.site_header = "后台管理"
+admin.site.site_title = '后台管理'
 
 
 class PublishAdmin(admin.ModelAdmin):
     list_display = ('name','id', 'city', 'email')
     search_fields = ('name',)
-    def __unicode__(self):              # __str__ on Python 3
-        return self.name
+    # def __unicode__(self):              # __str__ on Python 3
+    #     return self.name
 
 admin.site.register(Publish,PublishAdmin)
 

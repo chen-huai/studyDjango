@@ -7,21 +7,30 @@ class Book(models.Model):
     pub_date = models.DateField()
     publish = models.ForeignKey("Publish", on_delete=models.CASCADE)
     authors = models.ManyToManyField("Author")
-
+    def __str__(self):              # __str__ on Python 3
+        return self.title
+    # 用于给本表指定一个别名
+    class Meta():
+        # verbose_name = "多表测试"
+        verbose_name_plural = "书籍"
 
 class Publish(models.Model):
     name = models.CharField(max_length=32)
     city = models.CharField(max_length=64)
     email = models.EmailField()
-    def __unicode__(self):              # __str__ on Python 3
+    def __str__(self):              # __str__ on Python 3
         return self.name
-
+    class Meta():
+        verbose_name_plural = "出版社"
 
 class Author(models.Model):
     name = models.CharField(max_length=32)
     age = models.SmallIntegerField()
     au_detail = models.OneToOneField("AuthorDetail", on_delete=models.CASCADE)
-
+    def __str__(self):              # __str__ on Python 3
+        return self.name
+    class Meta():
+        verbose_name_plural = "作者"
 
 class AuthorDetail(models.Model):
     gender_choices = (
@@ -33,6 +42,10 @@ class AuthorDetail(models.Model):
     tel = models.CharField(max_length=32)
     addr = models.CharField(max_length=64)
     birthday = models.DateField()
+
+    class Meta():
+        verbose_name_plural = "作者详情"
+
 class Emp(models.Model):
     name = models.CharField(max_length=32)
     age = models.IntegerField()

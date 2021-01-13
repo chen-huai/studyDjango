@@ -1,9 +1,14 @@
-# from django.conf.urls import url
 from django.contrib import admin
 from django.urls import include, re_path,path
 from . import views,testdb,search,search2
+
+from django.conf.urls import url
+from django.contrib import admin
+from django.views.generic.base import RedirectView
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    # url(r'^ch\.ico/pre>, RedirectView.as_view(url=r'statics/images/applications_chemistry_science.ico')),
     # url(r'^admin/', admin.site.urls),
     re_path(r'^$(?i)', views.hello),
     re_path(r'runoob/$(?i)', views.runoob),
