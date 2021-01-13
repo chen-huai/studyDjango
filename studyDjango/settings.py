@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'simpleui',
+    # 'bootstrap_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'app01',
     'moreTable',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -133,3 +135,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "statics"),
 ]
+
+# simpleui设置
+# STATIC_ROOT = os.path.join(BASE_DIR, "statics")
+SIMPLEUI_HOME_INFO = False
+# SIMPLEUI_LOGO = 'https://www.zcool.com.cn/work/ZNTAxMTMxNzY=.html'
+SIMPLEUI_LOGO = 'https://www.tuvsud.cn/images/logo-100.png'# TUV logo
+SIMPLEUI_ICON = {
+	'多表测试': 'fas fa-archive',
+}
