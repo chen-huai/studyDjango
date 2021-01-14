@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'TestModel',
     'app01',
     'moreTable',
+    'region',
 ]
 
 
@@ -146,7 +147,8 @@ SIMPLEUI_LOGO = 'https://www.tuvsud.cn/images/logo-100.png'# TUV logo
 SIMPLEUI_ICON = {
 	'多表测试': 'fas fa-archive',
 }
-
+# 新的user模型
+# AUTH_USER_MODEL = "region.NewUser"
 
 # 验证码配置
 # MULTI_CAPTCHA_ADMIN = {
